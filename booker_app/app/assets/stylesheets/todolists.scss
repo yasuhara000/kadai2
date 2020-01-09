@@ -1,0 +1,55 @@
+// Place all the styles related to the todolists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  padding-top:50px;
+  padding-left:50px;
+}
+
+table{
+  margin-bottom: 30px;
+}
+.books{
+  margin-bottom: 30px;
+
+
+}
+.title2{
+  padding-top:20px;
+}
+
+
+.link{
+
+  margin-top:54px;
+
+}
+.link2{
+  margin-top:33px;
+
+}
+.link3{
+  padding-right:10px;
+
+}
+
+.text2{
+  margin:34px 34px 34px 34px;
+
+}
+.nav{
+  text-align: center;
+}
+.dec{
+  padding-top:10px;
+
+}
+.update{
+  padding-top:10px;
+  padding-bottom:10px;
+}

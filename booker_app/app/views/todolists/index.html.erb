@@ -1,0 +1,60 @@
+
+
+<main>
+<h1 class="books">Books</h1>
+<div class="main-clearfix">
+<table>
+  <div class ="title1">
+    <tr>
+      <td><h3 class="nav">title</h3></td>
+      <td><h3 class="nav">Body</h3></td>
+    </tr>
+      <% @books.each do |book| %>
+      <tr>
+        <td><p class="text2"><%= book.title %></p></td>
+        <td><p class="text2"><%= book.body %></p></td>
+        <td>
+          <p>
+            <span class="link3"><%=link_to 'Show', todolist_path(book.id) %></span>
+            <span class="link3"><%=link_to 'Edit', edit_todolist_path(book.id) %></span>
+            <span class="link3"><%= link_to "Destroy", destroy_todolist_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></span>
+          </p>
+        </td>
+      </tr>
+      <%end%>
+
+  </div>
+
+  </table>
+
+
+  </div>
+
+
+
+<div class= "content">
+
+  <h1>NEW BOOK </h1>
+  <%=form_for(@book, url:'/todolists') do |f|%>
+
+    <h4 class="title2">title</h4>
+    <span><%=f.text_field :title %></span>
+
+    <h4 class="title2">本文</h4>
+    <span><%=f.text_area :body%></span>
+
+    <%=f.submit 'create book'%>
+  <%end%>
+  <%=flash[:notice]%>
+
+
+  <% @book.errors.full_messages.each  do |message| %>
+      <div class="form-error">
+            <%= message %>
+      </div>
+  <%end%>
+
+
+
+ </div>
+</main>
