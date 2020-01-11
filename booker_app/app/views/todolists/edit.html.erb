@@ -11,9 +11,9 @@
     <p class="update"><%= f.submit 'updatebook' %></p>
 
   <% end %>
-  <%=link_to "show",edit_todolist_path %>
+  <%=link_to "show",edit_book_path %>
   <span class="dec">|</span>
-  <%=link_to "back",index_path%>
+  <%=link_to "back",book_path%>
 
   <% @book.errors.full_messages.each  do |message| %>
       <div class="form-error">

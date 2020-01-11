@@ -12,7 +12,7 @@ class TodolistsController < ApplicationController
     @books = Book.all
     if @book.save
       flash[:notice] = "successfully"
-      redirect_to index_path
+      redirect_to book_path(@book)
 
     else
       render "/todolists/index"
@@ -37,7 +37,7 @@ end
       @book.update(params_book)
       if @book.save
           flash[:notice] = "successfully"
-          redirect_to todolist_path
+          redirect_to book_path
       else
           render :edit
       end
@@ -47,7 +47,7 @@ end
   def destroy
       book = Book.find(params[:id])
       book.destroy
-      redirect_to index_path
+      redirect_to books_path
 
   end
 
